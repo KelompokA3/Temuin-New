@@ -1,0 +1,41 @@
+
+.main-footer{
+    background-color: rgb(92, 19, 121);
+}
+.footer-bottom{
+    background-color: rgb(70, 12, 94);
+    
+}
+.LayananKami,.Alamat,.SosialMedia{
+  color: white;
+  width: 360px;
+  text-align: center;
+  font-size: small;
+  
+}
+.footer-bottom{
+  color: white;
+  text-align: center;
+  font-size: small;
+}
+h4{
+  color: white;
+}
+  .footer-middle {
+    background: var(--mainDark);
+    padding-top: 3rem;
+    color: var(--mainWhite);
+  }
+
+  .footer-bottom {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  ul li a {
+    color: var(--mainGrey);
+  }
+
+  ul li a:hover {
+    color: var(--mainLightGrey);
+  }

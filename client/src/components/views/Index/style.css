@@ -1,0 +1,162 @@
+/*google font*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	z-index: 99999;
+	padding: 10px 0;
+}
+
+.navbar .logo {
+	src: url();
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 750;
+	letter-spacing: 2px;
+}
+
+.navbar ul.nav {
+	margin-right: 15%;
+}
+
+.navbar ul.nav li.active,
+.navbar ul.nav li:hover {
+	background: rgba(255, 255, 255, 0.5);
+	color: #000;
+
+}
+
+.navbar ul.nav li a {
+	color: #fff;
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.navbar ul.nav li.active a,
+.navbar ul.nav li:hover a {
+	color: #000;
+}
+
+.topnav .search-container {
+	float: right;
+}
+
+.topnav input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+}
+
+.topnav .search-container button {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+	background: #ccc;
+}
+
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+	width: 30%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*slider*/
+#carouselExampleIndicators {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+#carouselExampleIndicators .carousel-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #000;
+}
+
+#carouselExampleIndicators .carousel-inner:before {
+	position: absolute;
+	content: '';
+	background: rgba(0, 0, 0, 0.45);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: url('https://images.pexels.com/photos/1749057/pexels-photo-1749057.jpeg?cs=srgb&dl=when-will-you-return-signage-1749057.jpg&fm=jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2) {
+	background: url('https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?cs=srgb&dl=sunglasses-apple-iphone-desk-1712.jpg&fm=jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3) {
+	background: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?cs=srgb&dl=adventure-calm-clouds-dawn-414171.jpg&fm=jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .info {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	height: auto;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item h1 {
+	height: auto;
+	color: #fff;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+	font-size: 5.5em;
+	font-weight: 750;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item p {
+	height: auto;
+	color: #ccc;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 500;
+}

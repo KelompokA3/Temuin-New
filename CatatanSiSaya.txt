@@ -1,0 +1,53 @@
+1) npm install
+bcrypt => Encrypt password
+body-parser => translate the json query (udh di include express)
+express => Our Middleware
+jsonwebtoken: Authentication 
+mongoose: DB
+
+2) Connect to Mongodb (dev.js)
+
+3) Create Upload Product Functionality
+    1) UploadProductPage.js //rfce for shortcut
+    2) Create routes in app.js
+         <Route exact path = "/register" component=
+          {Auth(UploadProductPage, true)}/>
+          true = page forbidden for non-sign-in use
+    3) Create upload page header tab
+        in navbar/rightmenu.js
+    4) Make all form, except drop zone
+    5) make fungsi onChange for input user
+
+4) File Upload CComponent
+    1) Create FileUpload.js
+    2) Install dropzone depedency
+        npm install react-dropzone --save
+    3) Make template file upload component
+        3.1)create product.js (Include API) in routes folder
+        3.2)add the functionality in index.js server folder
+        3.3)
+    4) make onDrop Functionality
+    5) make onDelete funtion
+
+5) Upload Peoduct Page Saving To Database
+    1) Make product model 
+        models/Product.js
+    2) Bring Uploadfilecomponent
+
+    3) Upload file data from upload file component to parent componenet
+    4) make onsubmit function
+    5) submit all into the server
+    6) save them in Mongodb
+    6.5) Create Alert in UploadProductPage if the field didnt filled yet
+
+6)  Display product list in the landing page
+    1) Create empty landing page
+    2) Fetch all product data from mongoDB to client
+        Create new routes getProducts in routes/product.js
+    3) Create landing page template
+        Reboot the landingpage.js
+        create imageslider utils
+    4) Display product lists in the landing page
+        use map() methods 
+
+    
