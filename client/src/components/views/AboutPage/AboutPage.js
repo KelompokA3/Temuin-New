@@ -5,15 +5,12 @@ import '../../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../../../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import '../../../../node_modules/jquery/src/jquery';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
-import ilham from './image/ilham.jpg';
-import jimi from './image/jimi.jpg';
+import ilham from './image/ilham.png';
+import jimi from './image/jimi.png';
 import rayhan from './image/rayhan.png';
-import aji from './image/aji.jpg';
-import iman from './image/iman.jpg';
-import febri from './image/febri.jpg';
-
-import Popper from 'popper.js';
-
+import aji from './image/aji.png';
+import iman from './image/iman.png';
+import febri from './image/febri.png';
 
 
 

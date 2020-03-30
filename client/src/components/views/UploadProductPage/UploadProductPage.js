@@ -7,13 +7,33 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Location = [
-  { key: 1, value: "JTK Lt 1" },
-  { key: 2, value: "JTK Lt 2" },
-  { key: 3, value: "Pujasera" },
-  { key: 4, value: "Masjid LH" },
-  { key: 5, value: "ATM" },
-  { key: 6, value: "Lainnya" },
-]
+  { key: 1, value: 'Gedung A' },
+  { key: 2, value: 'Gedung B' },
+  { key: 3, value: 'Gedung C' },
+  { key: 4, value: 'Gedung D' },
+  { key: 5, value: 'Gedung E' },
+  { key: 6, value: 'Gedung F' },
+  { key: 7, value: 'Gedung G' },
+  { key: 8, value: 'Gedung H' },
+  { key: 9, value: 'Pendopo' },
+  { key: 10, value: 'Gedung Direktorat' },
+  { key: 11, value: 'Gedung P2T' },
+  { key: 12, value: 'Area Parkiran Mahasiswa' },
+  { key: 13, value: 'Area Parkiran Dosen' },
+  { key: 14, value: 'Student Center' },
+  { key: 15, value: 'Masjid LH' },
+  { key: 16, value: 'BRI Polban' },
+  { key: 17, value: 'Student Center' }
+];
+const Category = [
+  { key: 0, value: 'Any' },
+  { key: 1, value: 'ATK ' },
+  { key: 2, value: 'Aksesoris' },
+  { key: 3, value: 'Barang Elektronik' },
+  { key: 4, value: 'Pakaian' },
+  { key: 5, value: 'Kunci' },
+  { key: 6, value: 'lainnya' }
+];
 
 //rfce
 function UploadProductPage(props) {
@@ -22,6 +42,7 @@ function UploadProductPage(props) {
   const [DescriptionValue, setDescriptionValue] = useState('');
   const [LocationValue, setLocationValue] = useState('');
   const [FounderValue, setFounderValue] = useState('');
+  const [CategoryValue, setCategoryValue] = useState('');
   const [DateValue, setDateValue] = useState(0);
   const [Images, setImages] = useState([]);
   const onTitleChange = event => {
@@ -32,6 +53,9 @@ function UploadProductPage(props) {
   };
   const onLocationChange = event => {
     setLocationValue(event.currentTarget.value);
+  };
+  const onCategoryChange = event => {
+    setCategoryValue(event.currentTarget.value);
   };
   const onFounderChange = event => {
     setFounderValue(event.currentTarget.value);
@@ -52,6 +76,7 @@ function UploadProductPage(props) {
       !DescriptionValue ||
       !DateValue ||
       !LocationValue ||
+      !CategoryValue ||
       !FounderValue ||
       !Images
     ) {
@@ -64,6 +89,7 @@ function UploadProductPage(props) {
       description: DescriptionValue,
       date: DateValue,
       location: LocationValue,
+      category: CategoryValue,
       founder: FounderValue,
       images: Images
     };
@@ -99,7 +125,17 @@ function UploadProductPage(props) {
         <label>Lokasi</label>
         <select onChange={onLocationChange}>
           {Location.map(item => (
-            <option key={item.key} value={item.key}>{item.value} </option>
+            <option key={item.key} value={item.key}>
+              {item.value}{' '}
+            </option>
+          ))}
+        </select>
+        <label>Kategori</label>
+        <select onChange={onCategoryChange}>
+          {Category.map(item => (
+            <option key={item.key} value={item.key}>
+              {item.value}{' '}
+            </option>
           ))}
         </select>
         <br />

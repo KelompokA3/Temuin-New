@@ -13,6 +13,10 @@ const barangSchema = mongoose.Schema({
   description: {
     type: String
   },
+  category: {
+    type: Number,
+    default: 1
+  },
   location: {
     type: Number,
     default: 1
@@ -33,6 +37,16 @@ const barangSchema = mongoose.Schema({
     default: 0
   }
 });
+
+barangSchema.index({
+  title:'text',
+  description:'text',
+},{
+  weights:{
+    name: 5,
+    description:1
+  }
+})
 
 const Barang = mongoose.model('Barang', barangSchema);
 
