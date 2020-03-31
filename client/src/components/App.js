@@ -10,6 +10,7 @@ import Footer from './views/Footer/Footer copy';
 import UploadProductPage from './views/UploadProductPage/UploadProductPage';
 import Main from './views/Index/Index';
 import About from './views/AboutPage/AboutPage';
+import Locations from './views/Locations/Locations';
 import DetailProductPage from './views/DetailProductPage/DetailProductPage';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" component={Auth(Main, null)} />
           <Route exact path="/Cari" component={Auth(LandingPage, null)} />
           <Route exact path="/About" component={Auth(About, null)} />
+          <Route exact path="/location" component={Auth(Locations, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route
@@ -28,7 +30,7 @@ function App() {
             path="/product/upload"
             component={Auth(UploadProductPage, true)}
           />
-           <Route
+          <Route
             exact
             path="/product/:productId"
             component={Auth(DetailProductPage, true)}

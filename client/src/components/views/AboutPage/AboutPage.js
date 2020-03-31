@@ -79,13 +79,13 @@ class About extends Component {
                                 <img class="rounded-circle" src={aji}></img>
                                 <h3 class="name">Aji Muhammad Zapar</h3>
                                 <p class="title">Technical Officer</p>
-                                <p class="description">...</p>
+                                <p class="description">"Sabar serta yakin. And don't forget, be the best version of yourself"</p>
                                 <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+         
 
             </div>
 
