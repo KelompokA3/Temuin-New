@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { Button, Descriptions } from 'antd';
 
 function ProductInfo(props) {
-  const [Product, setProduct] = useState({});
 
-  useEffect(() => {
-    setProduct(props.detail);
-  }, [props.detail]);
+    const [Product, setProduct] = useState({})
+
+    useEffect(() => {
+
+        setProduct(props.detail)
+
+    }, [props.detail])
 
   return (
     <div>
