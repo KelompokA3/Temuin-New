@@ -8,6 +8,8 @@ import RegisterPage from './views/RegisterPage/RegisterPage.js';
 import NavBar from './views/NavBar/NavBar';
 import Footer from './views/Footer/Footer copy';
 import UploadProductPage from './views/UploadProductPage/UploadProductPage';
+import UploadProductPage2 from './views/UploadProductPage/UploadProductPage2';
+import ContactForm from './views/UploadProductPage/ContactForm';
 import Main from './views/Index/Index';
 import About from './views/AboutPage/AboutPage';
 import Locations from './views/Locations/Locations';
@@ -30,6 +32,12 @@ function App() {
             path="/product/upload"
             component={Auth(UploadProductPage, true)}
           />
+          <Route
+            exact
+            path="/product/upload2"
+            component={Auth(UploadProductPage2, true)}
+          />
+          <Route exact path="/contact" component={Auth(ContactForm, true)} />
           <Route
             exact
             path="/product/:productId"

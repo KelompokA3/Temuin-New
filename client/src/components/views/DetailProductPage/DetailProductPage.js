@@ -3,9 +3,12 @@ import Axios from 'axios';
 import { Row, Col } from 'antd';
 import ProductImage from './Sections/ProductImage';
 import ProductInfo from './Sections/ProductInfo';
+import ContactForm from '../UploadProductPage/ContactForm';
 import { Button, Descriptions } from 'antd';
+import {Link} from 'react-router-dom';
 
 function DetailProductPage(props) {
+  
   const productId = props.match.params.productId;
   const [Product, setProduct] = useState([]);
 
@@ -16,6 +19,12 @@ function DetailProductPage(props) {
       }
     );
   }, []);
+
+  const onSubmit = event => {
+    event.preventDefault();
+    
+
+  };
   return (
     <div className="postPage" style={{ width: '100%', padding: '3rem 4rem' }}>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -38,7 +47,7 @@ function DetailProductPage(props) {
               {' '}
               {Product.category}
             </Descriptions.Item>
-            <Descriptions.Item label="Penemu">
+            <Descriptions.Item label="Kontak Penemu">
               {' '}
               {Product.founder}
             </Descriptions.Item>
@@ -51,8 +60,13 @@ function DetailProductPage(props) {
           <br />
           <br />
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <Button size="large" shape="round" type="danger">
-              Barang Saya !
+            <Button
+              size="large"
+              shape="round"
+              type="danger"
+              onClick={onSubmit}
+            >
+            <Link to='/contact'>Barang Saya</Link>
             </Button>
           </div>
         </Col>

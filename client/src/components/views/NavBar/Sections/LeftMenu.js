@@ -16,7 +16,7 @@ function LeftMenu(props) {
       <Menu.Item key="location">
         <a href="/location">Location</a>
       </Menu.Item>
-
+  
       <Menu.Item key="cari">
         <a href="/cari">Cari</a>
       </Menu.Item>

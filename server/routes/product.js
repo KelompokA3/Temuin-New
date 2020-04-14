@@ -1,9 +1,64 @@
 const express = require('express');
 const router = express.Router();
 const { Barang } = require('../models/Barang');
+const { Ketemu } = require('../models/Ketemu');
 const multer = require('multer');
 
 const { auth } = require('../middleware/auth');
+
+var nodemailer = require('nodemailer');
+
+router.post('/send', auth, (req, res, next) => {
+
+  var output = `
+  <p>Pemberitahuan Barang Temuin JTK</p>
+  <h3>Pengguna Dengan Identitas: </h3>
+  <ul>  
+    <li>Nama: ${req.body.name}</li>
+    <li>Prodi: ${req.body.prodi}</li>
+    <li>Alamat: ${req.body.message}</li>
+  
+  </ul>
+ 
+`;
+
+  let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: 'kelompok3.proyek@gmail.com', // generated ethereal user
+      pass: 'qsmyvztagmebxrjg', // generated ethereal password
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+ // setup email data with unicode symbols
+  let mailOptions = {
+    from: '"Temuin JTK" <kelompok3.proyek@gmail.com>', // sender address
+    to: req.body.email, // list of receivers
+    subject: 'TEMUIN JTK', // Subject line
+    text: 'Hello world?', // plain text body
+    html: output, // html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: %s', info.messageId);
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+
+    res.render('contact', {
+      msg: 'Email has been sent',
+    });
+  });
+
+})
+
 
 var storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,7 +73,7 @@ var storage = multer.diskStorage({
       return cb(res.status(400).end('only jpg, png are allowed'), false);
     }
     cb(null, true);
-  }
+  },
 });
 
 var upload = multer({ storage: storage }).single('file');
@@ -28,14 +83,14 @@ var upload = multer({ storage: storage }).single('file');
 //=================================
 
 router.post('/uploadImage', auth, (req, res) => {
-  upload(req, res, err => {
+  upload(req, res, (err) => {
     if (err) {
       return res.json({ success: false, err });
     }
     return res.json({
       success: true,
       image: res.req.file.path,
-      fileName: res.req.file.filename
+      fileName: res.req.file.filename,
     });
   });
 });
@@ -44,7 +99,17 @@ router.post('/uploadProduct', auth, (req, res) => {
   //save all the data we got from the client into the DB
   const product = new Barang(req.body);
 
-  product.save(err => {
+  product.save((err) => {
+    if (err) returnres.status(400).json({ success: false, err });
+    return res.status(200).json({ success: true });
+  });
+});
+
+router.post('/uploadProduct2', auth, (req, res) => {
+  //save all the data we got from the client into the DB
+  const ketemu = new Ketemu(req.body);
+
+  ketemu.save((err) => {
     if (err) returnres.status(400).json({ success: false, err });
     return res.status(200).json({ success: true });
   });
@@ -64,7 +129,7 @@ router.post('/getProducts', (req, res) => {
       if (key === 'category') {
         findArgs[key] = {
           $gte: req.body.filters[key][0],
-          $lte: req.body.filters[key][1]
+          $lte: req.body.filters[key][1],
         };
       } else {
         findArgs[key] = req.body.filters[key];
@@ -111,7 +176,7 @@ router.get('/products_by_id', (req, res) => {
   if (type === 'array') {
     let ids = req.query.id.split(',');
     productIds = [];
-    productIds = ids.map(item => {
+    productIds = ids.map((item) => {
       return item;
     });
   }
