@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Button,Typography } from 'antd';
+import { Button, Typography } from 'antd';
 const { Title } = Typography;
 
 function ContactForm() {

@@ -160,3 +160,94 @@
 	font-size: 1.2em;
 	font-weight: 500;
 }
+
+/*ABOUT*/
+.unit-4 {
+	padding: 30px;
+	background: #f1f1f1;
+	border-radius: 5px;
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+	position: relative;
+	top: 0;
+	margin-bottom: 4em;
+	text-align: center;
+	padding-top: 50px; }
+	.unit-4 .unit-4-icon {
+	  position: absolute;
+	  -webkit-transform: translateX(-50%);
+	  -ms-transform: translateX(-50%);
+	  transform: translateX(-50%);
+	  left: 50%;
+	  top: -50px; }
+	  .unit-4 .unit-4-icon .icon-wrap {
+		width: 80px;
+		height: 80px;
+		position: relative;
+		border-radius: 50%;
+		display: inline-block;
+		background-color: #5e1e64;
+		-webkit-box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4);
+		box-shadow: 0 4px 20px -5px rgba(66, 133, 244, 0.4); }
+		.unit-4 .unit-4-icon .icon-wrap span {
+		  font-size: 2rem;
+		  position: absolute;
+		  top: 50%;
+		  color: #fff !important;
+		  left: 50%;
+		  -webkit-transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%); }
+	.unit-4 h3 {
+	font-weight: bolder;
+	  font-size: 18px;
+	  color: #000;
+	  -webkit-transition: .3s all ease;
+	  -o-transition: .3s all ease;
+	  transition: .3s all ease; }
+	.unit-4 p {
+	  font-weight: 300;
+	  -webkit-transition: .3s all ease;
+	  -o-transition: .3s all ease;
+	  transition: .3s all ease; }
+	.unit-4 *:last-child {
+	  margin-bottom: 0; }
+	.unit-4:hover {
+	  background: #5e1e64;
+	  -webkit-box-shadow: 0 4px 20px -5px rgb(236, 156, 5);
+	  box-shadow: 0 4px 20px -5px rgba(244, 197, 66, 0.945);
+	  top: -7px; }
+	  .unit-4:hover .icon-wrap {
+		background-color: #fff; }
+		.unit-4:hover .icon-wrap span {
+		  color: rgb(236, 156, 5) !important; }
+	  .unit-4:hover h3 {
+		color: #fff; }
+	  .unit-4:hover p {
+		font-weight: 300;
+		color: rgba(255, 255, 255, 0.7); }
+		.unit-4:hover p a {
+		  color: #fff; }
+
+
+
+
+		  .h-entry img {
+			margin-bottom: 30px; }
+		  
+		  .h-entry .meta {
+			color: #b3b3b3;
+			font-size: 14px; }
+		  
+		  .h-entry h2 {
+			font-size: 20px; }
+		  
+			
+.section-title {
+	color: #000;
+	font-size: 40px;
+	font-weight: 900; }
+	@media (max-width: 991.98px) {
+	  .section-title {
+		font-size: 30px; } }
