@@ -15,6 +15,13 @@
   width: 150px;
   float: left;
 }
+.menu__title {
+  size: 100%;
+  width: 200px;
+  float: center;
+  margin-bottom: 30px;
+}
+
 
 .menu__logo a {
   

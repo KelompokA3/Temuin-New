@@ -5,6 +5,7 @@ import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import CheckBox2 from './Sections/CheckBox2';
 import { location, category } from './Sections/Datas';
+import './style.css'
 import SearchFeature from './Sections/SearchFeature';
 
 const { Meta } = Card;
@@ -117,7 +118,25 @@ function LandingPage() {
       <div style={{ textAlign: 'center', margin: '5rem' }}>
         <h2>
           {' '}
-          Cari Barang Anda <Icon type="search" />{' '}
+          <section class="breadcrumb-section set-bg" >
+
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <div class="breadcrumb__text">
+                    <h2> Cari Barang Anda <Icon type="search" />{' '}</h2>
+                    <div class="breadcrumb__option">
+                      <a href="/">Home</a>
+                      <span>Cari</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            </br>
+          </section>
+
         </h2>
       </div>
 
@@ -160,10 +179,10 @@ function LandingPage() {
           <h2>No post yet...</h2>
         </div>
       ) : (
-        <div>
-          <Row gutter={[16, 16]}>{renderCards}</Row>
-        </div>
-      )}
+          <div>
+            <Row gutter={[16, 16]}>{renderCards}</Row>
+          </div>
+        )}
       <br />
       <br />
 

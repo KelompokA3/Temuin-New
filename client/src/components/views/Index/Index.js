@@ -9,7 +9,7 @@ import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import temuin1 from './temuin1.jpg';
 import temuin2 from './temuin2.jpg';
 import temuin3 from './temuin3.jpg';
-
+import Logo from "./logo_temuin.png";
 
 class Main extends Component {
 
@@ -30,7 +30,7 @@ class Main extends Component {
               <div class="carousel-item active">
                 <div class="info">
 
-                  <h1>Temuin</h1>
+                  <h1> Temuin</h1>
                   <div class="wrap">
                     <div id="cover">
                       <div class="tb">
@@ -115,8 +115,8 @@ class Main extends Component {
           <div class="container">
             <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
               <div class="col-7 text-center  mb-5">
-                <h2 class="section-title">Temuin Features</h2>
-                <p class="lead">Temuin adalah website yang ditujukan untuk membantu masyarakay polban mencari barang hilang</p>
+                <h2 class="section-title"> <img class="menu__title" src={Logo}></img> Features</h2>
+                <p class="lead">Temuin adalah website yang ditujukan untuk membantu masyarakat polban mencari barang hilang</p>
               </div>
             </div>
             <div class="row align-items-stretch">
@@ -170,7 +170,7 @@ class Main extends Component {
           <div class="container">
             <div class="row mb-5">
               <div class="col-12 text-center">
-                <h2 class="section-title mb-3">Testimonial</h2>
+                <h2 class="section-title mb-3"><img class="menu__title" src={Logo}></img> Testimonial</h2>
                 <p class="lead">Testimoni dari beberapa warga polban yang berhasil menemukan barang hilangnya</p>
               </div>
             </div>
@@ -180,27 +180,27 @@ class Main extends Component {
                 <div class="h-entry">
                   <img src={temuin1} alt="Image" class="img-fluid"></img>
                   <h2><a href="#">Testimoni Temuin</a></h2>
-                  <div class="meta mb-4">Jimi Rumbiak -- Feb 25, 2020<a href="#"> TemuiNews</a></div>
+                  <div class="meta mb-4">Jimi Rumbiak -- Feb 25, 2020<a href="#"> Temuin Blog</a></div>
                   <p>Berikut adalah testimoni dari rekan yang barangnya berhasil ditemukan oleh Temuin</p>
-                  <p><a href="#">Continue Reading...</a></p>
+                  <p><a href="/blog">Continue Reading...</a></p>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                 <div class="h-entry">
                   <img src={temuin2} alt="Image" class="img-fluid"></img>
                   <h2><a href="#">Testimoni Temuin</a></h2>
-                  <div class="meta mb-4">Imaniar Salsabila--Jan 18, 2019 <a href="#"> TemuiNews</a></div>
+                  <div class="meta mb-4">Imaniar Salsabila--Jan 18, 2019 <a href="#"> Temuin Blog</a></div>
                   <p>Berikut adalah testimoni dari rekan yang barangnya berhasil ditemukan oleh Temuin</p>
-                  <p><a href="#">Continue Reading...</a></p>
+                  <p><a href="/blog">Continue Reading...</a></p>
                 </div>
               </div>
               <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
                 <div class="h-entry">
                   <img src={temuin3} alt="Image" class="img-fluid"></img>
                   <h2><a href="#">Testimoni Temuin</a></h2>
-                  <div class="meta mb-4">Jimi Rumbiak -- Jan 18, 2019<a href="#"> TemuiNews</a></div>
+                  <div class="meta mb-4">Jimi Rumbiak -- Jan 18, 2019<a href="#"> Temuin Blog</a></div>
                   <p>Berikut adalah testimoni dari rekan yang barangnya berhasil ditemukan oleh Temuin</p>
-                  <p><a href="#">Continue Reading...</a></p>
+                  <p><a href="/blog">Continue Reading...</a></p>
                 </div>
               </div>
 

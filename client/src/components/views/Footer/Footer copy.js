@@ -6,7 +6,8 @@ import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 function Footer() {
 
   return (
-    <footer class="mainfooter" role="contentinfo">
+
+<footer class="mainfooter" role="contentinfo">
       <div class="footer-middle">
         <div class="container">
           <div class="row">

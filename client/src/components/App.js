@@ -11,6 +11,7 @@ import UploadProductPage from './views/UploadProductPage/UploadProductPage';
 import UploadProductPage2 from './views/UploadProductPage/UploadProductPage2';
 import ContactForm from './views/UploadProductPage/ContactForm';
 import Main from './views/Index/Index';
+import Blog from './views/Blog/blog';
 import About from './views/AboutPage/AboutPage';
 import Locations from './views/Locations/Locations';
 import DetailProductPage from './views/DetailProductPage/DetailProductPage';
@@ -22,11 +23,13 @@ function App() {
       <div style={{ paddingTop: '69px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
           <Route exact path="/" component={Auth(Main, null)} />
-          <Route exact path="/Cari" component={Auth(LandingPage, null)} />
+          <Route exact path="/Cari" component={Auth(LandingPage, true)} />
           <Route exact path="/About" component={Auth(About, null)} />
+          <Route exact path="/blog" component={Auth(Blog, null)} />
           <Route exact path="/location" component={Auth(Locations, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+
           <Route
             exact
             path="/product/upload"
@@ -45,6 +48,7 @@ function App() {
           />
         </Switch>
       </div>
+      <br></br>
       <Footer />
     </Suspense>
   );

@@ -111,21 +111,21 @@
 	position: relative;
 	height: 100%;
 	width: 100%;
-	background: url('https://images.pexels.com/photos/1749057/pexels-photo-1749057.jpeg?cs=srgb&dl=when-will-you-return-signage-1749057.jpg&fm=jpg');
+	background: url('https://images.pexels.com/photos/412462/pexels-photo-412462.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 	background-size: 100% 100%;
 	background-position: center;
 	background-attachment: fixed;
 }
 
 #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2) {
-	background: url('https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?cs=srgb&dl=sunglasses-apple-iphone-desk-1712.jpg&fm=jpg');
+	background: url('https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 	background-size: 100% 100%;
 	background-position: center;
 	background-attachment: fixed;
 }
 
 #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3) {
-	background: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?cs=srgb&dl=adventure-calm-clouds-dawn-414171.jpg&fm=jpg');
+	background: url('https://images.pexels.com/photos/103567/pexels-photo-103567.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 	background-size: 100% 100%;
 	background-position: center;
 	background-attachment: fixed;

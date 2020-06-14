@@ -87,3 +87,46 @@
   .team-boxed .social a:hover {
     opacity:1;
   }
+
+  /*---------------------
+  Breadcrumb
+-----------------------*/
+
+.breadcrumb-section {
+background-image: url('https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  display: flex;
+  background-repeat: no-repeat;
+	align-items: center;
+	padding: 45px 0 40px;
+}
+
+.breadcrumb__text h2 {
+	font-size: 46px;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.breadcrumb__option a {
+	display: inline-block;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 700;
+	margin-right: 20px;
+	position: relative;
+}
+
+.breadcrumb__option a:after {
+	position: absolute;
+	right: -12px;
+	top: 13px;
+	height: 1px;
+	width: 10px;
+	background: #ffffff;
+	content: "";
+}
+
+.breadcrumb__option span {
+	display: inline-block;
+	font-size: 16px;
+	color: #ffffff;
+}
