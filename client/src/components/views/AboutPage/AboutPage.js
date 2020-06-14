@@ -24,7 +24,7 @@ class About extends Component {
 
             <div class="team-boxed">
                 <div class="container">
-                    <section class="breadcrumb-section set-bg" >
+                    <section class="breadcrumb-section2 set-bg" >
 
                         <div class="container">
                             <div class="row">
@@ -33,7 +33,7 @@ class About extends Component {
                                         <h2>About</h2>
                                         <div class="breadcrumb__option">
                                             <a href="/">Home</a>
-                                            <span>Blog</span>
+                                            <span>About</span>
                                         </div>
                                     </div>
                                 </div>
