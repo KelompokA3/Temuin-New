@@ -23,26 +23,21 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="mail">
-          <a href="/login">Signin</a>
+          <a href="/login">Sign In</a>
         </Menu.Item>
         <Menu.Item key="app">
-          <a href="/register">Signup</a>
+          <a href="/register">Sign Up</a>
         </Menu.Item>
-        <Menu.Item key="upload">
-          <a href={'/product/upload'}>Upload</a>
-        </Menu.Item>
-
       </Menu>
     );
   } else {
     return (
       <Menu mode={props.mode}>
-
         <Menu.Item key="logout">
-          <a onClick={logoutHandler}>Logout</a>
+          <a onClick={logoutHandler}>Sign Out</a>
         </Menu.Item>
-        <Menu.Item key="upload">
-          <a href={'/product/upload'}>Upload</a>
+        <Menu.Item key="app">
+          <a href={'/product/upload'}>Post</a>
         </Menu.Item>
       </Menu>
     );

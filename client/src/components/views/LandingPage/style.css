@@ -1,43 +1,189 @@
-  /*---------------------
+/*---------------------
   Breadcrumb
 -----------------------*/
 
 .breadcrumb-section4 {
-    background-image: url('https://images.pexels.com/photos/262488/pexels-photo-262488.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-      display: flex;
-      background-repeat: no-repeat;
-        align-items: center;
-        padding: 45px 0 40px;
-    }
-    
-    .breadcrumb__text h2 {
-        font-size: 46px;
-        color: #ffffff;
-        font-weight: 700;
-    }
-    
-    .breadcrumb__option a {
-        display: inline-block;
-        font-size: 16px;
-        color: #ffffff;
-        font-weight: 700;
-        margin-right: 20px;
-        position: relative;
-    }
-    
-    .breadcrumb__option a:after {
-        position: absolute;
-        right: -12px;
-        top: 13px;
-        height: 1px;
-        width: 10px;
-        background: #ffffff;
-        content: "";
-    }
-    
-    .breadcrumb__option span {
-        display: inline-block;
-        font-size: 16px;
-        color: #ffffff;
-    }
-    
+  background-image: url('https://images.pexels.com/photos/906055/pexels-photo-906055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  display: flex;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 45px 0 40px;
+}
+
+.breadcrumb__text h2 {
+  font-size: 46px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.breadcrumb__option a {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-right: 20px;
+  position: relative;
+}
+
+.breadcrumb__option a:after {
+  position: absolute;
+  right: -12px;
+  top: 13px;
+  height: 1px;
+  width: 10px;
+  background: #ffffff;
+  content: '';
+}
+
+.breadcrumb__option span {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/*---------------------
+  Categories
+-----------------------*/
+.carousel-products {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+
+.carousel-products .item {
+  min-height: 330px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-products .item .img-box {
+  height: 160px;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-products .item img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.carousel-products .item h4 {
+  color: #333;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.carousel-products .item .btn {
+  color: #333;
+  border-radius: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-top: 5px;
+  line-height: 16px;
+}
+
+.carousel-products .item .btn:hover,
+.carousel-products .item .btn:focus {
+  color: #fff;
+  background: rgb(105, 15, 146);
+  border-color: rgb(105, 15, 146);
+  box-shadow: none;
+}
+
+.carousel-products .item .btn i {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.carousel-products .thumb-wrapper {
+  text-align: center;
+}
+
+.carousel-products .thumb-content {
+  padding: 15px;
+}
+
+.carousel-products .carousel-control {
+  height: 100px;
+  width: 40px;
+  background: none;
+  margin: auto 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-products .carousel-control i {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  margin: -16px 0 0 0;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  font-weight: bold;
+}
+
+.carousel-products .item-price {
+  font-size: 13px;
+  padding: 2px 0;
+}
+
+.carousel-products .item-price strike {
+  color: #999;
+  margin-right: 5px;
+}
+
+.carousel-products .item-price span {
+  color: #d6951d;
+  font-size: 110%;
+}
+
+.carousel-products .carousel-control.left i {
+  margin-left: -3px;
+}
+
+.carousel-products .carousel-control.left i {
+  margin-right: -3px;
+}
+
+.carousel-products .carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-products-indicators li,
+.carousel-products-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.carousel-products-indicators li {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-products-indicators li.active {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.star-rating li {
+  padding: 0;
+}
+
+.star-rating i {
+  font-size: 14px;
+  color: #ffc000;
+}
